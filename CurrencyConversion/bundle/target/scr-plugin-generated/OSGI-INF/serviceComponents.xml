@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component enabled="true" name="com.adobe.cq.sling.HandleClaim">
+        <implementation class="com.adobe.cq.sling.HandleClaim"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths" value="/bin/mySearchServlet"/>
+        <property name="sling.servlet.methods" value="POST"/>
+        <property name="service.pid" value="com.adobe.cq.sling.HandleClaim"/>
+        <reference name="repository" interface="org.apache.sling.jcr.api.SlingRepository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository"/>
+    </scr:component>
+</components>
