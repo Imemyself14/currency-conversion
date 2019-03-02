@@ -3,7 +3,7 @@ My Project
 
 This a content package project generated using the multimodule-content-package-archetype.
 
-Building
+Building 
 --------
 
 This project uses Maven for building. Common commands:
